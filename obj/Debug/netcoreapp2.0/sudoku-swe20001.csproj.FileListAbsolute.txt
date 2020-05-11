@@ -1,0 +1,12 @@
+C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\bin\Debug\netcoreapp2.0\sudoku-swe20001.deps.json
+C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\bin\Debug\netcoreapp2.0\sudoku-swe20001.runtimeconfig.json
+C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\bin\Debug\netcoreapp2.0\sudoku-swe20001.runtimeconfig.dev.json
+C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\bin\Debug\netcoreapp2.0\sudoku-swe20001.dll
+C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\bin\Debug\netcoreapp2.0\sudoku-swe20001.pdb
+C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\obj\Debug\netcoreapp2.0\sudoku-swe20001.csprojAssemblyReference.cache
+C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\obj\Debug\netcoreapp2.0\sudoku-swe20001.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\obj\Debug\netcoreapp2.0\sudoku-swe20001.AssemblyInfoInputs.cache
+C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\obj\Debug\netcoreapp2.0\sudoku-swe20001.AssemblyInfo.cs
+C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\obj\Debug\netcoreapp2.0\sudoku-swe20001.dll
+C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\obj\Debug\netcoreapp2.0\sudoku-swe20001.pdb
+C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\obj\Debug\netcoreapp2.0\sudoku-swe20001.genruntimeconfig.cache

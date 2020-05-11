@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "sudoku-swe20001/1.0.0": {
+        "runtime": {
+          "sudoku-swe20001.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "sudoku-swe20001/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
