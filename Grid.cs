@@ -2,18 +2,11 @@
 {
     public class Grid
     {
-        private readonly Cell[,] _cells;
+        private Cell[,] _cells;
 
         public Grid()
         {
-            _cells = new Cell[9, 9];
-            for (int x = 0; x < 9; x++)
-            {
-                for (int y = 0; y < 9; y++)
-                {
-                    _cells[x, y] = new Cell(x, y);
-                }
-            }
+            Reset();
         }
 
         /// <summary>
@@ -43,6 +36,21 @@
             if (cell != null)
             {
                 cell.Value = value;
+            }
+        }
+
+        /// <summary>
+        /// Resets the cells
+        /// </summary>
+        public void Reset()
+        {
+            _cells = new Cell[9, 9];
+            for (int x = 0; x < 9; x++)
+            {
+                for (int y = 0; y < 9; y++)
+                {
+                    _cells[x, y] = new Cell(x, y);
+                }
             }
         }
 

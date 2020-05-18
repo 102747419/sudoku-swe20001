@@ -38,5 +38,14 @@ namespace sudoku_swe20001
             int newValue = _grid.GetCell(x, y).Value;
             Assert.AreEqual(value, newValue);
         }
+
+        [Test]
+        public void TestReset()
+        {
+            _grid.SetValue(1, 1, 1);
+            _grid.Reset();
+            int value = _grid.GetCell(1, 1).Value;
+            Assert.AreNotEqual(1, value);
+        }
     }
 }
