@@ -1,10 +1,10 @@
-using System;
-using SplashKitSDK;
-
-public class Program
+namespace sudoku_swe20001
 {
-    public static void Main()
+    public class Program
     {
-
+        public static void Main()
+        {
+            Puzzles.LoadPuzzles("sudoku.csv");
+        }
     }
 }
