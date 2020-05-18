@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using System;
+using SplashKitSDK;
 
 namespace sudoku_swe20001
 {
@@ -15,7 +15,7 @@ namespace sudoku_swe20001
         public void SetUp()
         {
             PuzzleData puzzleData = new PuzzleData(_puzzle, _solution);
-            _sudoku = new Sudoku(puzzleData);
+            _sudoku = new Sudoku(puzzleData, new Point2D());
         }
 
         [Test]
@@ -23,14 +23,14 @@ namespace sudoku_swe20001
         {
             string solution = new string('1', 81);
             PuzzleData puzzleData = new PuzzleData(solution, solution);
-            _sudoku = new Sudoku(puzzleData);
+            _sudoku = new Sudoku(puzzleData, new Point2D());
             Assert.IsTrue(_sudoku.IsSolved());
         }
 
         [Test]
         public void TestIsSolvedWhenNoPuzzle()
         {
-            _sudoku = new Sudoku(null);
+            _sudoku = new Sudoku(null, new Point2D());
             Assert.IsTrue(_sudoku.IsSolved());
         }
 
@@ -89,7 +89,7 @@ namespace sudoku_swe20001
         {
             string puzzle = new string('2', 81);
             PuzzleData puzzleData = new PuzzleData(puzzle, _solution);
-            _sudoku = new Sudoku(puzzleData);
+            _sudoku = new Sudoku(puzzleData, new Point2D());
             Assert.IsTrue(_sudoku.IsDefaultCell(1, 1));
         }
     }
