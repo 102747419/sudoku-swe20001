@@ -325,6 +325,11 @@ namespace sudoku_swe20001
             return x + y * 9;
         }
 
+        /// <summary>
+        /// Gets a cell's screen position based on its dimensions
+        /// </summary>
+        /// <param name="cell">Cell to get position of</param>
+        /// <returns>Screen position</returns>
         private Point2D GetCellScreenPosition(Cell cell)
         {
             return new Point2D()
@@ -334,6 +339,12 @@ namespace sudoku_swe20001
             };
         }
 
+        /// <summary>
+        /// Checks whether a point lies within a cell
+        /// </summary>
+        /// <param name="cell">Cell to check</param>
+        /// <param name="pt">Screen position</param>
+        /// <returns></returns>
         private bool CellContainsPoint(Cell cell, Point2D pt)
         {
             Point2D pos = GetCellScreenPosition(cell);
