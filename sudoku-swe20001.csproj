@@ -19,6 +19,7 @@
     <None Remove="fonts\Roboto-Regular.ttf" />
     <None Remove="fonts\Roboto-Thin.ttf" />
     <None Remove="fonts\Roboto-ThinItalic.ttf" />
+    <None Remove="puzzles.txt" />
   </ItemGroup>
 
   <ItemGroup>
@@ -56,6 +57,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="fonts\Roboto-ThinItalic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="puzzles.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
