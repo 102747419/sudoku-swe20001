@@ -2,6 +2,8 @@
 {
     public class Grid
     {
+        public static int Size = 9;
+
         private Cell[,] _cells;
 
         public Grid()
@@ -44,10 +46,11 @@
         /// </summary>
         public void Reset()
         {
-            _cells = new Cell[9, 9];
-            for (int x = 0; x < 9; x++)
+            int n = Grid.Size;
+            _cells = new Cell[n, n];
+            for (int x = 0; x < n; x++)
             {
-                for (int y = 0; y < 9; y++)
+                for (int y = 0; y < n; y++)
                 {
                     _cells[x, y] = new Cell(x, y);
                 }
@@ -62,7 +65,8 @@
         /// <returns></returns>
         private bool IsValidCell(int x, int y)
         {
-            return x >= 0 && x < 9 && y >= 0 && y < 9;
+            int n = Grid.Size;
+            return x >= 0 && x < n && y >= 0 && y < n;
         }
     }
 }

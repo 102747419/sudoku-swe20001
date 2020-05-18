@@ -19,7 +19,7 @@
         /// <returns></returns>
         public bool HasValue()
         {
-            return Value > 0 && Value <= 9;
+            return Value > 0 && Value <= Grid.Size;
         }
     }
 }
