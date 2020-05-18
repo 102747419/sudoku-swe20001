@@ -4,9 +4,16 @@ C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Projec
 C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\bin\Debug\netcoreapp2.0\sudoku-swe20001.dll
 C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\bin\Debug\netcoreapp2.0\sudoku-swe20001.pdb
 C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\obj\Debug\netcoreapp2.0\sudoku-swe20001.csprojAssemblyReference.cache
-C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\obj\Debug\netcoreapp2.0\sudoku-swe20001.csproj.CoreCompileInputs.cache
 C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\obj\Debug\netcoreapp2.0\sudoku-swe20001.AssemblyInfoInputs.cache
 C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\obj\Debug\netcoreapp2.0\sudoku-swe20001.AssemblyInfo.cs
 C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\obj\Debug\netcoreapp2.0\sudoku-swe20001.dll
 C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\obj\Debug\netcoreapp2.0\sudoku-swe20001.pdb
 C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\obj\Debug\netcoreapp2.0\sudoku-swe20001.genruntimeconfig.cache
+C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\bin\Debug\netcoreapp2.0\NUnit3.TestAdapter.dll
+C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\bin\Debug\netcoreapp2.0\NUnit3.TestAdapter.pdb
+C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\bin\Debug\netcoreapp2.0\nunit.engine.dll
+C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\bin\Debug\netcoreapp2.0\nunit.engine.api.dll
+C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\User\OneDrive - Swinburne University\2020 Semester 1\Development Project 1\sudoku-swe20001\obj\Debug\netcoreapp2.0\sudoku-swe20001.csproj.CoreCompileInputs.cache
