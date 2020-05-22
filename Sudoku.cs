@@ -56,6 +56,12 @@ namespace sudoku_swe20001
                 Reset();
             }
 
+            // Random puzzle
+            if (SplashKit.KeyTyped(KeyCode.NKey))
+            {
+                SetPuzzle(Puzzles.GetRandomPuzzle());
+            }
+
             if (IsSelected())
             {
                 if (!IsDefaultCell(_selected))
