@@ -43,21 +43,52 @@ namespace sudoku_swe20001
                 }
             }
 
-            if (IsSelected() && !IsDefaultCell(_selected))
+            if (IsSelected())
             {
-                // Enter value using number keys
-                for (int i = 0; i < 9; i++)
+                if (!IsDefaultCell(_selected))
                 {
-                    if (SplashKit.KeyTyped(KeyCode.Num1Key + i))
+                    // Enter value using number keys
+                    for (int i = 0; i < 9; i++)
                     {
-                        _selected.Value = i + 1;
+                        if (SplashKit.KeyTyped(KeyCode.Num1Key + i))
+                        {
+                            _selected.Value = i + 1;
+                        }
+                    }
+
+                    // Remove value
+                    if (SplashKit.KeyTyped(KeyCode.BackspaceKey))
+                    {
+                        _selected.Value = 0;
                     }
                 }
 
-                // Remove value
-                if (SplashKit.KeyTyped(KeyCode.BackspaceKey))
+                // Move selected cell left
+                if (SplashKit.KeyTyped(KeyCode.LeftKey))
                 {
-                    _selected.Value = 0;
+                    int x = (9 + _selected.X - 1) % 9;
+                    SelectCell(x, _selected.Y);
+                }
+
+                // Move selected cell right
+                if (SplashKit.KeyTyped(KeyCode.RightKey))
+                {
+                    int x = (_selected.X + 1) % 9;
+                    SelectCell(x, _selected.Y);
+                }
+
+                // Move selected cell up
+                if (SplashKit.KeyTyped(KeyCode.UpKey))
+                {
+                    int y = (9 + _selected.Y - 1) % 9;
+                    SelectCell(_selected.X, y);
+                }
+
+                // Move selected cell down
+                if (SplashKit.KeyTyped(KeyCode.DownKey))
+                {
+                    int y = (_selected.Y + 1) % 9;
+                    SelectCell(_selected.X, y);
                 }
             }
 
