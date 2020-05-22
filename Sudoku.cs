@@ -1,5 +1,6 @@
 ﻿using SplashKitSDK;
 using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace sudoku_swe20001
@@ -41,6 +42,12 @@ namespace sudoku_swe20001
                         }
                     }
                 }
+            }
+
+            // Reveal clue
+            if (SplashKit.KeyTyped(KeyCode.CKey))
+            {
+                RevealClue();
             }
 
             if (IsSelected())
@@ -200,6 +207,71 @@ namespace sudoku_swe20001
                     _position.Y + offset,
                     opts
                 );
+            }
+        }
+
+        /// <summary>
+        /// Reveals one clue. Mistakes are corrected before empty cells are filled.
+        /// </summary>
+        public void RevealClue()
+        {
+            if (!IsSolved())
+            {
+                // Initialize variables
+                Random r = new Random();
+                Cell cell;
+                int[] pt;
+                int x;
+                int y;
+                int index;
+
+                // Initialize lists
+                List<int[]> missing = new List<int[]>();
+                List<int[]> incorrect = new List<int[]>();
+
+                // Collect cells with missing or incorrect values
+                for (y = 0; y < 9; y++)
+                {
+                    for (x = 0; x < 9; x++)
+                    {
+                        cell = GetCell(x, y);
+                        pt = new int[] { x, y };
+
+                        if (!cell.HasValue())
+                        {
+                            missing.Add(pt);
+                        }
+                        else if (!CellHasCorrectValue(cell))
+                        {
+                            incorrect.Add(pt);
+                        }
+                    }
+                }
+
+                // Select random cell with incorrect or missing value, prioritising incorrect cells
+                if (incorrect.Count > 0)
+                {
+                    index = r.Next(incorrect.Count);
+                    pt = incorrect[index];
+                }
+                else
+                {
+                    index = r.Next(missing.Count);
+                    pt = missing[index];
+                }
+
+                // Get incorrect cell
+                x = pt[0];
+                y = pt[1];
+                cell = GetCell(x, y);
+
+                // Get correct value from solution
+                index = GetIndex(x, y);
+                int value = int.Parse(_puzzleData.Solution[index].ToString());
+
+                // Select and correct cell value
+                SelectCell(x, y);
+                cell.Value = value;
             }
         }
 
@@ -386,6 +458,18 @@ namespace sudoku_swe20001
             bool bottom = pt.Y < pos.Y + Cell.Width;
 
             return left && right && top && bottom;
+        }
+
+        /// <summary>
+        /// Checks whether a cell has the correct value
+        /// </summary>
+        /// <param name="cell">Cell to check</param>
+        /// <returns></returns>
+        private bool CellHasCorrectValue(Cell cell)
+        {
+            int index = GetIndex(cell.X, cell.Y);
+            int correctValue = int.Parse(_puzzleData.Solution[index].ToString());
+            return cell.Value == correctValue;
         }
     }
 }
