@@ -57,6 +57,12 @@ namespace sudoku_swe20001
                 Reset();
             }
 
+            // Solve puzzle
+            if (SplashKit.KeyTyped(KeyCode.SKey))
+            {
+                Solve();
+            }
+
             // Random puzzle
             if (SplashKit.KeyTyped(KeyCode.NKey))
             {
@@ -286,6 +292,25 @@ namespace sudoku_swe20001
                 // Select and correct cell value
                 SelectCell(x, y);
                 cell.Value = value;
+            }
+        }
+
+        /// <summary>
+        /// Solves the puzzle
+        /// </summary>
+        public void Solve()
+        {
+            for (int x = 0; x < Size; x++)
+            {
+                for (int y = 0; y < Size; y++)
+                {
+                    Cell cell = GetCell(x, y);
+                    int index = GetIndex(x, y);
+                    if (!IsDefaultCell(cell))
+                    {
+                        cell.Value = int.Parse(_puzzleData.Solution[index].ToString());
+                    }
+                }
             }
         }
 

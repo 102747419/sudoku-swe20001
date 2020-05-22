@@ -92,5 +92,12 @@ namespace sudoku_swe20001
             _sudoku = new Sudoku(puzzleData, new Point2D());
             Assert.IsTrue(_sudoku.IsDefaultCell(1, 1));
         }
+
+        [Test]
+        public void TestSolve()
+        {
+            _sudoku.Solve();
+            Assert.IsTrue(_sudoku.IsSolved());
+        }
     }
 }
