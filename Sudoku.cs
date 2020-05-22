@@ -16,6 +16,7 @@ namespace sudoku_swe20001
         private PuzzleData _puzzleData;
         private Cell _selected;
         private Point2D _position;
+        private bool _solved;
 
         public Sudoku(PuzzleData puzzleData, Point2D position)
         {
@@ -29,7 +30,7 @@ namespace sudoku_swe20001
         public void Update()
         {
             // Select cell using mouse
-            if (SplashKit.MouseClicked(MouseButton.LeftButton))
+            if (SplashKit.MouseClicked(MouseButton.LeftButton) && !IsSolved())
             {
                 for (int x = 0; x < 9; x++)
                 {
@@ -69,14 +70,14 @@ namespace sudoku_swe20001
                     // Enter value using number keys
                     for (int i = 0; i < 9; i++)
                     {
-                        if (SplashKit.KeyTyped(KeyCode.Num1Key + i))
+                        if (SplashKit.KeyTyped(KeyCode.Num1Key + i) && !IsSolved())
                         {
                             _selected.Value = i + 1;
                         }
                     }
 
                     // Remove value
-                    if (SplashKit.KeyTyped(KeyCode.BackspaceKey))
+                    if (SplashKit.KeyTyped(KeyCode.BackspaceKey) && !IsSolved())
                     {
                         _selected.Value = 0;
                     }
@@ -111,10 +112,11 @@ namespace sudoku_swe20001
                 }
             }
 
-            if (IsSolved())
+            if (IsSolved() && !_solved)
             {
-                Console.WriteLine("Sudoku solved!");
-                SetPuzzle(Puzzles.GetRandomPuzzle());
+                Console.WriteLine("Sudoku solved! Press N for a new puzzle.");
+                _solved = true;
+                DeselectCell();
             }
         }
 
@@ -146,7 +148,7 @@ namespace sudoku_swe20001
                     {
                         SplashKit.FillRectangle(Cell.SelectedColor, p.X, p.Y, w, w);
                     }
-                    else if (CellContainsPoint(cell, SplashKit.MousePosition()))
+                    else if (CellContainsPoint(cell, SplashKit.MousePosition()) && !IsSolved())
                     {
                         SplashKit.FillRectangle(Cell.HoverColor, p.X, p.Y, w, w);
                     }
@@ -312,6 +314,7 @@ namespace sudoku_swe20001
         public new void Reset()
         {
             base.Reset();
+            _solved = false;
             DeselectCell();
 
             if (_puzzleData != null)
