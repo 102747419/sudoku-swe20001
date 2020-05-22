@@ -50,6 +50,12 @@ namespace sudoku_swe20001
                 RevealClue();
             }
 
+            // Reset puzzle
+            if (SplashKit.KeyTyped(KeyCode.RKey))
+            {
+                Reset();
+            }
+
             if (IsSelected())
             {
                 if (!IsDefaultCell(_selected))
